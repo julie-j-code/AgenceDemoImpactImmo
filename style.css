@@ -568,12 +568,11 @@ footer a {
         letter-spacing: 0;
     }
 
-
     #offres div:first-of-type,
     #agence div {
         width: 100%;
-        /* height: 400px; */
         text-align: center;
+        background-color: rgba(250, 250, 250, 0.8);
     }
 
     #offres,
@@ -587,6 +586,7 @@ footer a {
     .form-group,
     #logiciel,
     #responsive,
+    #info,    
     .row,
     footer>div {
         flex-wrap: wrap;
@@ -610,12 +610,6 @@ footer a {
         line-height: 30px;
         border: none;
         padding: 10px;
-    }
-
-
-    #agence div,
-    #offres div:first-of-type {
-        background-color: rgba(250, 250, 250, 0.8);
     }
 
     .intro {
@@ -656,6 +650,12 @@ footer a {
 
     nav a i {
         color: #1A75BB;
+    }
+
+
+    #agence, #offres{
+        padding: 100px 0;
+        margin-bottom: 0;
     }
 
 }
