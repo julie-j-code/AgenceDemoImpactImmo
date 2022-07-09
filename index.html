@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/ff1b45b592.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="script.js"></script>
+
+    <title>Agence Demo</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="logo">
+            <a href="">
+
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <!-- en situation et avec plus de temps, j'aurais fait un menu burger pour version mobiles. sans bibliothèque et compte tenu de la maquette, pas le temps
+        je vais donc juste forcer le display:none pour les items de menu autres que Accueil sur version mobile-->
+        <nav>
+            <div id="nav_items">
+                <a href="#">Accueil</a>
+                <a href="#">Alerte Email</a>
+                <a href="#">Recherche un bien</a>
+                <a href="#">Vendre un bien</a>
+                <a href="#">Votre sélection</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="burger()">
+                <i class="fa fa-bars fa-2x"></i>
+            </a>
+        </nav>
+        <div class="intro">
+            <button class="btn-primary">Votre agence</button>
+            <!-- à supposer qu'on aura besoin de ce type de call to action ailleurs dans le site, on peut le considérer comme une variante de bouton-->
+            <button class="btn-white">De proximité</button>
+        </div>
+
+        <form class="bg-secondary">
+            <div class="form-group">
+                <select name="prestation" id="prestation">
+                    <option value="vente" selected>Vente</option>
+                    <option value="Locationn">Location</option>
+                </select>
+                <select name="type" id="type">
+                    <option selected>Type de bien</option>
+                    <option value="Appartement">Appartement</option>
+                    <option value="Studio">Studio</option>
+                    <option value="Villa">Villa</option>
+                </select>
+                <input type="text" id="localisation" placeholder="Où ex : Région, Département, CP, Ville...">
+
+                <input type="text" id="distance" placeholder="km">
+            </div>
+
+            <div onclick="showMore()" id="more"> Plus de choix <i id="sort" class="fa fa-sort-down"></i> </div>
+
+            <div class="form-group hidden" id="myDIV">
+                <select name="type" id="options">
+                    <option selected>Options</option>
+                    <option value="piscine">Piscine</option>
+                    <option value="jardin">Jardin</option>
+                    <option value="rdc">RDC</option>
+                    <option value="rdc">Proche tram</option>
+                </select>
+            </div>
+
+        </form>
+    </header>
+
+    <main>
+        <!-- Acheter / louer-->
+        <section id="offres">
+            <div>
+                <p>Je souhaite</p>
+                <h2>Acheter / Louer</h2>
+                <button class="btn-primary">Toutes nos offres <i class="fa-solid fa-right-long"></i></button>
+            </div>
+        </section>
+        <!-- Services-->
+
+        <section id="services">
+            <h2>Nos services</h2>
+            <span><img src="img/vagues.png" alt=""></span>
+
+            <div class="row">
+                <div>
+                    <img src="img/Forme 793.png" alt="">
+                    <p>Recevez nos dernières annonces</p>
+                    <button class="btn-secondary">Créer une alerte email</button>
+                </div>
+                <div>
+                    <img src="img/Forme 794.png" alt="">
+                    <p>Vous souhaitez connaitre la valeur de votre bien ?</p>
+                    <button class="btn-secondary">Estimation Gratuite</button>
+                </div>
+                <div>
+                    <img src="img/Forme 795.png" alt="">
+                    <p>Confiez nous votre bien à la vente</p>
+                    <button class="btn-secondary">Déposez votre bien</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Agence-->
+        <section id="agence">
+            <div>
+                <h2>Notre agence</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nobis mollitia molestias hic sunt nihil
+                    labore dolorum sapiente? Fuga rerum delectus velit labore voluptatum expedita reiciendis optio
+                    deleniti. Cumque, ratione!</p>
+
+                <button class="btn-primary">Lire la suite <i class="fa-solid fa-right-long"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+
+            <h2>Agence Demo</h2>
+            <p>50 avenue de Celleneuve, 34500 Montpellier - Tel. 04 90 30 45 15 - Fax : 04 67 70 95 48</p>
+            <button class="btn-secondary">Nous écrire</button>
+            <div><i class="fa-brands fa-facebook fa-sm"></i><i class="fa-brands fa-linkedin fa-sm"></i><i
+                    class="fa-brands fa-pinterest fa-sm"></i><i class="fa-brands fa-twitter fa-sm"></i><i
+                    class="fa-brands fa-pinterest fa-sm"></i><i class="fa-brands fa-instagram fa-sm"></i><i
+                    class="fa-brands fa-youtube fa-sm"></i>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="info">
+                <a href="">Mensions Légales</a><a href="">Barème d’honoraires</a><a href="">Accès propriétaires</a>
+            </div>
+            <div id="partage">
+                <span>Partager</span><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-linkedin"></i><i
+                    class="fa-brands fa-pinterest"></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="responsive">
+                <img src="img/macaron responsive.png" alt="">
+                <span>
+                    Afin de vous offrir un confort de lecture permanent, depuis votre PC, votre tablette ou votre
+                    smartphone, notre site s’adapte automatiquement aux différents types d'écrans
+                </span>
+            </div>
+            <div id="logiciel">
+                <img src="img/Forme 790.png" alt="">
+                <span>
+                    Logiciel immobilier Adapt Immo
+                    Création site internet immobilier
+                    Référencement site immobilier
+                </span>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

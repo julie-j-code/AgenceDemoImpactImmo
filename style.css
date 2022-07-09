@@ -1,0 +1,659 @@
+@import url("https://use.typekit.net/ecp1zjo.css");
+/* pour Brandon Grotesque Adobe font */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/* pour reset */
+
+@font-face {
+    font-family: 'Multi';
+    font-weight: 400;
+    src: url(‘/fonts/Multi.ttf’) format(‘truetype’)
+}
+
+@font-face {
+    font-family: 'Multi';
+    font-weight: 700;
+    src: url(‘/fonts/Multi-Bold.ttf’) format(‘truetype’)
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    font-weight: 400;
+    src: url(‘/fonts/PlayfairDisplay-Regular.ttf’) format(‘truetype’)
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    font-weight: 700;
+    src: url(‘/fonts/PlayfairDisplay-Bold.ttf’) format(‘truetype’)
+}
+
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: white;
+}
+
+/* pas vraiment d'uniformité au niveau des marges non plus */
+p {
+    margin: 30px 0;
+}
+
+#logo {
+    width: 300px;
+    margin: 40px auto;
+}
+
+/* regroupements utiles de selecteurs pour propriétés récurrentes */
+
+form,
+.intro .btn-primary,
+.intro .btn-white,
+#offres div:first-of-type,
+#agence div {
+    position: absolute;
+}
+
+nav a,
+.btn-primary,
+.btn-secondary,
+#offres p,
+#services h2,
+#agence h2 {
+    font-family: "Multi", sans-serif;
+    font-weight: 700;
+}
+
+footer h2 {
+    font-family: "brandon-grotesque", sans-serif;
+
+}
+
+.btn-white,
+#offres h2 {
+    font-family: 'PlayfairDisplay';
+    font-weight: 700;
+}
+
+footer {
+    font-family: "Multi", sans-serif;
+}
+
+/* pour h2 du coup, même police bien qu'on ne savait rien d'après les calques
+et aucune indication d'après les styles absents au panneau des actifs - optimisation possible ! */
+
+.bg-primary,
+.btn-primary,
+section .btn-secondary:hover,
+footer {
+    background-color: #E89221;
+}
+
+.bg-secondary,
+nav a::after,
+.btn-secondary,
+section .btn-primary:hover,
+.form-group {
+    background-color: #1A75BB;
+}
+
+#agence div,
+#offres div:first-of-type {
+    background-color: white;
+}
+
+header,
+main {
+    width: 100%;
+    max-width: 1600px;
+}
+
+header,
+nav,
+#nav_items,
+.intro,
+main,
+form,
+#offres {
+    margin: 0 auto;
+}
+
+#nav_items {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+nav,
+#nav_items,
+.form-group,
+#info,
+#responsive,
+#logiciel,
+#partage,
+footer,
+.row {
+    display: flex;
+}
+
+nav,
+#nav_items,
+.form-group,
+#logiciel,
+#partage,
+.row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+select,
+input {
+    height: 50px;
+    padding: 0 10px;
+    flex: 1;
+    border: 0;
+}
+
+.btn-primary,
+.btn-white {
+    height: 65px;
+    letter-spacing: 5px;
+}
+
+#offres p,
+#agence h2 {
+    color: #1A75BB;
+    margin-top: 110px;
+}
+
+.intro,
+#agence div,
+#offres div {
+    box-shadow: 0px 0px 35px;
+}
+
+#logiciel,
+#partage,
+#info,
+#responsive {
+    gap: 15px;
+}
+
+/* fin regroupement -------------------  */
+
+button {
+    padding: 10px 20px;
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    font-size: 19px;
+}
+
+.btn-secondary {
+    height: 45px;
+}
+
+.intro {
+    /* l'image a du être recadrée et tansformée en jpeg */
+    margin-top: 50px;
+    background-image: url("img/header.jpg");
+    background-size: 100%;
+    min-height: 730px;
+    position: relative;
+}
+
+.intro .btn-primary {
+    top: 32.5%;
+    left: 32.5%;
+}
+
+.intro .btn-white {
+    top: 40%;
+    right: 30%;
+    background: white;
+    text-transform: none;
+    color: #1A75BB;
+    font-size: 39px;
+}
+
+/* en partant  du principe qu'on a une largeur contrainte,  mais je ne travaille jamais comme ça */
+
+nav,
+.intro {
+    width: 100%;
+    max-width: 1266px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #E89221;
+    position: relative;
+    font-size: 13px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    z-index: 60;
+    left: 50%;
+    right: 50%;
+    bottom: -20px;
+    height: 3px;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* pour le déploiement des items de menu façon burger */
+nav a.icon {
+    display: none;
+}
+
+form {
+    position: absolute;
+    width: 100%;
+    max-width: 1100px;
+    height: 140px;
+    left: 50%;
+    z-index: 300;
+    /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+    /* décalage de 50% de sa propre taille */
+    padding: 20px;
+    transition-property: height;
+}
+
+.form-group {
+    gap: 18px;
+}
+
+::placeholder {
+    color: #1A75BB;
+}
+
+/* pour l'affichage partie additionnelle du formulaire */
+#more {
+    margin-top: 30px;
+    text-align: right;
+    color: white;
+}
+
+#more:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+form i {
+    height: 50px;
+    margin-left: 50px;
+}
+
+/* fin partie additionnelle */
+
+
+/* encore une fois, si on s'en tient à la maquette et une largeur contrainte, mais je fais jamais ça */
+section {
+    width: 100%;
+    max-width: 940px;
+    margin: auto;
+}
+
+#offres {
+    text-align: right;
+    margin-top: 100px;
+    position: relative;
+    background-image: url("./img/offre.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 60%;
+    height: 500px;
+}
+
+#offres div:first-of-type {
+    /* encore une hauteur contrainte. on pourrait faire autrement */
+    height: 430px;
+    text-align: center;
+    width: 50%;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%, -50%);
+}
+
+#offres h2 {
+    font-size: 34px;
+}
+
+#offres button {
+    margin-top: 80px;
+}
+
+.row {
+    justify-content: space-around;
+}
+
+#services {
+    position: relative;
+}
+
+#services .row {
+    gap: 120px;
+    margin-top: 50px;
+}
+
+#services div {
+    flex: 1;
+    text-align: center;
+}
+
+#services h2 {
+    position: relative;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 34px;
+    color: #E89221;
+}
+
+#services span {
+    display: block;
+    text-align: center;
+}
+
+#agence {
+    text-align: right;
+    margin-top: 100px;
+    position: relative;
+    height: 500px;
+    background-image: url("./img/agence.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+}
+
+#agence div {
+    text-align: left;
+    padding: 0 60px;
+    width: 50%;
+    left: 0;
+    /* encore une hauteur contrainte. on pourrait faire autrement */
+    height: 430px;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%, -50%);
+}
+
+
+#agence button {
+    /* vsm--------------  */
+    margin-left: 50px;
+}
+
+footer {
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 700px;
+}
+
+footer h2 {
+    /* d'après maquette Brandon Demo. Plain de polices différentes dan le footer. j'ai fait avec Multi */
+    font-size: 32px;
+    text-transform: uppercase;
+
+}
+
+footer,
+footer a {
+    color: white;
+}
+
+footer>div {
+    height: 100px;
+    justify-content: space-between;
+    /* à virer impératif sur mobiles ou tablettes */
+    gap: 400px;
+}
+
+footer>div:nth-child(2) {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    line-height: 100px;
+}
+
+footer i {
+    /* font-size: 33px; */
+    letter-spacing: 10px;
+}
+
+footer div {
+    /* puisque largeur contrainte */
+    width: 100%;
+    max-width: 1257px;
+    margin: auto;
+}
+
+footer>div:nth-child(1)>div {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+#logiciel,
+#partage {
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+#partage {
+    justify-content: end;
+}
+
+#info,
+#responsive {
+    text-align: left;
+    justify-content: start;
+}
+
+#responsive img {
+    width: 50px;
+    height: 50px;
+}
+
+footer a {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* RWD -------------------------------------- */
+
+@media screen and (max-width:940px) {
+    /* parce que sections contraintes à 940. Je n'aurais jamais fait ça */
+
+    footer>div {
+        gap: 50px;
+        height: auto;
+    }
+
+    footer>div:nth-child(2) .row {
+        flex-direction: column;
+        line-height: normal;
+        height: auto;
+
+    }
+
+    #info,
+    #partage {
+        width: auto;
+        gap: 10px;
+        line-height: auto;
+    }
+
+    #agence button {
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    nav {
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 0;
+        margin: 0;
+        position: relative;
+        height: auto;
+    }
+
+    #nav_items {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        transition: background-color 1s;
+        padding-bottom: 50px;
+    }
+
+    #nav_items a {
+        display: block;
+        min-height: 40px;
+        width: 100vw;
+        min-width: 350px;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    form {
+        position: absolute;
+        height: auto;
+        z-index: 2000;
+    }
+
+    form input,
+    form select {
+        min-width: 300px;
+        padding: 10px;
+    }
+
+    header {
+        /* pourquoi */
+        height: auto;
+    }
+
+    .intro button {
+        left: 50%;
+        right: 50%;
+        letter-spacing: 0;
+    }
+
+
+    #offres div:first-of-type,
+    #agence div {
+        width: 100%;
+        /* height: 400px; */
+        text-align: center;
+    }
+
+    #offres,
+    #agence,
+    .intro {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    nav,
+    .form-group,
+    #logiciel,
+    #responsive,
+    .row,
+    footer>div {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        height: 900px;
+    }
+
+    footer>div {
+        height: 350px;
+        background-color: blue;
+    }
+
+    footer>div:nth-child(2) {
+        line-height: 30px;
+        border: none;
+        padding: 10px;
+    }
+
+
+    #agence div,
+    #offres div:first-of-type {
+        background-color: rgba(250, 250, 250, 0.8);
+    }
+
+    .intro {
+        min-height: 600px;
+    }
+
+    .intro .btn-primary,
+    .intro .btn-white {
+        left: 10%;
+        width: 80%;
+    }
+
+    .intro .btn-white {
+        top: 50%
+    }
+
+    #logo {
+        top: 0;
+        z-index: 1000;
+        text-align: center;
+        width: 80%;
+        height: auto;
+    }
+
+    #logo img {
+        width: 200px;
+    }
+
+    /* burger */
+    nav a.icon {
+        color: #1A75BB;
+        display: block;
+        position: absolute;
+        top: -75px;
+        right: 5%;
+        z-index: 3000;
+    }
+
+    nav a i {
+        color: #1A75BB;
+    }
+
+}
