@@ -550,7 +550,7 @@ footer a {
 
     form input,
     form select {
-        min-width: 300px;
+        width: 100%;
         padding: 10px;
     }
 
@@ -601,7 +601,6 @@ footer a {
 
     footer>div {
         height: 350px;
-        background-color: blue;
     }
 
     footer>div:nth-child(2) {
