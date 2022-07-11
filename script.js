@@ -12,11 +12,14 @@ function showMore() {
 
 function burger() {
   var x = document.getElementById("nav_items");
-  if (x.style.display === "block") {
+  var swith_nav = document.getElementById("nav_toggler");
+  swith_nav.classList.toggle("fa-xmark")
+  if (x.style.display === "flex") {
     x.style.display = "none";
   } else {
-    x.style.display = "block";
+    x.style.display = "flex";
   }
+  
 }
 
 

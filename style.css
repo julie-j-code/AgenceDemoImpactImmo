@@ -147,13 +147,15 @@ nav,
     align-items: center;
 }
 
-
 select,
-input {
+input{
     height: 50px;
     padding: 0 10px;
     flex: 1;
     border: 0;
+}
+button[type=submit] {
+    height: 50px; width: 50px;
 }
 
 .btn-primary,
@@ -294,7 +296,7 @@ form {
     display: block;
 }
 
-form i {
+#sort {
     height: 50px;
     margin-left: 50px;
 }
@@ -408,7 +410,6 @@ footer {
 }
 
 footer h2 {
-    /* d'après maquette Brandon Demo. Plain de polices différentes dan le footer. j'ai fait avec Multi */
     font-size: 32px;
     text-transform: uppercase;
 
@@ -433,12 +434,10 @@ footer>div:nth-child(2) {
 }
 
 footer i {
-    /* font-size: 33px; */
     letter-spacing: 10px;
 }
 
 footer div {
-    /* puisque largeur contrainte */
     width: 100%;
     max-width: 1257px;
     margin: auto;
@@ -509,6 +508,10 @@ footer a {
 
     #agence button {
         margin-left: 0;
+    }
+
+    button[type=submit] {
+        display: none;
     }
 
 }

@@ -20,12 +20,9 @@
 
         <div id="logo">
             <a href="">
-
                 <img src="img/logo.png" alt="">
             </a>
         </div>
-        <!-- en situation et avec plus de temps, j'aurais fait un menu burger pour version mobiles. sans bibliothèque et compte tenu de la maquette, pas le temps
-        je vais donc juste forcer le display:none pour les items de menu autres que Accueil sur version mobile-->
         <nav>
             <div id="nav_items">
                 <a href="#">Accueil</a>
@@ -35,14 +32,12 @@
                 <a href="#">Votre sélection</a>
                 <a href="#">Contact</a>
             </div>
-
             <a href="javascript:void(0);" class="icon" onclick="burger()">
-                <i class="fa fa-bars fa-2x"></i>
+                <i id="nav_toggler" class="fa fa-bars fa-2x"></i>
             </a>
         </nav>
         <div class="intro">
             <button class="btn-primary">Votre agence</button>
-            <!-- à supposer qu'on aura besoin de ce type de call to action ailleurs dans le site, on peut le considérer comme une variante de bouton-->
             <button class="btn-white">De proximité</button>
         </div>
 
@@ -59,8 +54,8 @@
                     <option value="Villa">Villa</option>
                 </select>
                 <input type="text" id="localisation" placeholder="Où ex : Région, Département, CP, Ville...">
-
                 <input type="text" id="distance" placeholder="km">
+                <button type="submit" class="bg-primary"><i class="fa fa-magnifying-glass"></i></button>
             </div>
 
             <div onclick="showMore()" id="more"> Plus de choix <i id="sort" class="fa fa-sort-down"></i> </div>
