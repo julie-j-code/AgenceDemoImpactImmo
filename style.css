@@ -205,6 +205,7 @@ button {
     margin-top: 50px;
     background-image: url("img/header.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
     min-height: 730px;
     position: relative;
 }
@@ -484,6 +485,16 @@ footer a {
 @media screen and (max-width:940px) {
     /* parce que sections contraintes à 940. Je n'aurais jamais fait ça */
 
+    .intro{
+        min-height: 500px;
+    }
+
+    .intro .btn-primary{
+        top:100px;
+    }
+    .intro .btn-white{
+        top:160px;
+    }
     section .btn-primary{
         letter-spacing: normal;
     }
