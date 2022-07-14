@@ -6,13 +6,11 @@ function showMore() {
 
   var i = document.getElementById("sort");
   i.classList.toggle("fa-sort-up");
-  document.querySelector("form").style.height = "auto";
 }
 
 function burger() {
   var x = document.getElementById("nav_items");
   var swith_nav = document.getElementById("nav_toggler");
-  var w = window.innerWidth;
 
   swith_nav.classList.toggle("fa-xmark")
   if (x.style.display === "flex") {
@@ -25,7 +23,10 @@ function burger() {
 
 function myFunction() {
   var x = document.getElementById("nav_items");
+
   var w = window.innerWidth;
-  if(w>768){x.style.display = "flex"}else{x.style.display ="none"};
+  if(w>768){x.style.display = "flex";
+  document.getElementById("nav_toggler").display="none";
+}else{x.style.display ="none";document.getElementById("nav_toggler").classList="fa fa-bars fa-2x"; };
 }
 
