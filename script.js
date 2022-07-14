@@ -6,8 +6,7 @@ function showMore() {
 
   var i = document.getElementById("sort");
   i.classList.toggle("fa-sort-up");
-  document.querySelector("form").style.height = "auto"
-
+  document.querySelector("form").style.height = "auto";
 }
 
 function burger() {

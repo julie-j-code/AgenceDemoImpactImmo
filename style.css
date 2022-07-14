@@ -148,14 +148,16 @@ nav,
 }
 
 select,
-input{
+input {
     height: 50px;
     padding: 0 10px;
     flex: 1;
     border: 0;
 }
+
 button[type=submit] {
-    height: 50px; width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 .btn-primary,
@@ -190,6 +192,8 @@ button {
     color: white;
     border: 0;
     text-transform: uppercase;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -267,7 +271,6 @@ form {
     transform: translate(-50%, -50%);
     /* décalage de 50% de sa propre taille */
     padding: 20px;
-    transition-property: height;
 }
 
 .form-group {
@@ -413,7 +416,6 @@ footer {
 footer h2 {
     font-size: 32px;
     text-transform: uppercase;
-
 }
 
 footer,
@@ -485,20 +487,32 @@ footer a {
 @media screen and (max-width:940px) {
     /* parce que sections contraintes à 940. Je n'aurais jamais fait ça */
 
-    .intro{
+    .intro {
         min-height: 500px;
     }
 
-    .intro .btn-primary{
-        top:100px;
+    .intro .btn-primary {
+        top: 100px;
     }
-    .intro .btn-white{
-        top:160px;
+
+    .intro .btn-white {
+        top: 160px;
     }
-    section .btn-primary{
+
+    .intro .btn-primary,
+    .intro .btn-white {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .intro .btn-white {
+        width: 50%;
+    }
+
+    section .btn-primary {
         letter-spacing: normal;
     }
-    
+
     footer>div {
         gap: 50px;
         height: auto;
@@ -571,15 +585,12 @@ footer a {
         padding: 10px;
     }
 
-    header {
-        /* pourquoi */
-        height: auto;
-    }
 
-    .intro button {
-        left: 50%;
-        right: 50%;
+    .intro .btn-white,
+    .intro .btn-primary {
+        width: 80%;
         letter-spacing: 0;
+        text-align: center;
     }
 
     #offres div:first-of-type,
@@ -600,7 +611,7 @@ footer a {
     .form-group,
     #logiciel,
     #responsive,
-    #info,    
+    #info,
     .row,
     footer>div {
         flex-wrap: wrap;
@@ -614,6 +625,7 @@ footer a {
 
     footer {
         height: 900px;
+        padding: 30px;
     }
 
     footer>div {
@@ -626,18 +638,9 @@ footer a {
         padding: 10px;
     }
 
-    .intro {
-        min-height: 600px;
-    }
-
-    .intro .btn-primary,
-    .intro .btn-white {
-        left: 10%;
-        width: 80%;
-    }
 
     .intro .btn-white {
-        top: 50%
+        top: 40%
     }
 
     #logo {
@@ -666,10 +669,21 @@ footer a {
         color: #1A75BB;
     }
 
-
-    #agence, #offres{
-        padding: 100px 0;
+    #agence,
+    #offres,
+    header,
+    nav {
+        padding: 0;
         margin-bottom: 0;
+    }
+
+    main {
+        margin-bottom: 50px;
+    }
+
+    footer,
+    .intro {
+        margin-top: 0;
     }
 
 }
